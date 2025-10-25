@@ -33,10 +33,10 @@ public:
         return num2 / num1;
     }
 
-    bool set_num1() {
+    bool set_num1(double num) {
 
-        if (num1 != 0) {
-            this->num1 = num1;
+        if (num != 0) {
+            this->num1 = num;
             return true;
         }
         else {
@@ -44,23 +44,15 @@ public:
         }
     }
 
-    bool set_num2() {
+    bool set_num2(double num) {
 
-        if (num2 != 0) {
-            this->num2 = num2;
+        if (num != 0) {
+            this->num2 = num;
             return true;
         }
         else {
             return false;
         }
-    }
-
-    void set_num1(double num1) {
-        this->num1 = num1;
-    }
-
-    void set_num2(double num1) {
-        this->num2 = num1;
     }
 };
 
@@ -75,8 +67,7 @@ int main() {
         while (true) {
             std::cout << "Введите num1: ";
             std::cin >> num1;
-            calculator.set_num1(num1);
-            if (calculator.set_num1()) {
+            if (calculator.set_num1(num1)) {
                 break;
             }
             std::cout << "Неверный ввод!" << std::endl;
@@ -85,8 +76,7 @@ int main() {
         while (true) {
             std::cout << "Введите num2: ";
             std::cin >> num2;
-            calculator.set_num2(num2);
-            if (calculator.set_num2()) {
+            if (calculator.set_num2(num2)) {
                 break;
             }
             std::cout << "Неверный ввод!" << std::endl;
